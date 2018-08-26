@@ -8,7 +8,7 @@ class DataExporter(object):
         values = self._get_rows_from_objects(row_objects)
         rows = [header]
         rows.extend(values)
-        with open(filename, 'wb') as f:
+        with open(filename, 'w') as f:
             writer = csv.writer(f)
             writer.writerows(rows)
 
