@@ -85,7 +85,7 @@ class TeamPlayerScraper:
         player.free_throws = ft_raw
 
         # Free Throws split out
-        ft_split = fg_raw.split('-')
+        ft_split = ft_raw.split('-')
         player.free_throws_made = float(ft_split[0])
         player.free_throws_attempted = float(ft_split[1])
         player.free_throws_pct = self._get_content(cells, 12)
